@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression">
+    <listeners>
+        <listener class-name="com.buffalocart.listener.TestListener"/>
+    </listeners>
+    <test name="Functional Test">
+        <classes>
+            <class name="com.buffalocart.test.LoginPageTest">
+                <methods>
+                    <include name="verify_Login_Page_Title"/>
+                    <include name="verify_User_Login_With_Valid_User_Credentials"/>
+                    <include name="verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials"/>
+                    <include name="verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox"/>
+                    <include name="verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
