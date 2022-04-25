@@ -40,7 +40,6 @@ public class Base {
             e.printStackTrace();
         }
     }
-
     public void testInitialize(String browser) {
         if (browser.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
