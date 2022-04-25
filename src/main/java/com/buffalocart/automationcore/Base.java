@@ -67,6 +67,7 @@ public class Base {
     @BeforeMethod(alwaysRun = true)
     //@Parameters({"browser","url"})
     public void setUp() {
+
         String browser= prop.getProperty("browser");
         String url=prop.getProperty("url");
         testInitialize(browser);
