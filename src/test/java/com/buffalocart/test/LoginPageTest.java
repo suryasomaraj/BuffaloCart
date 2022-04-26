@@ -65,7 +65,7 @@ public class LoginPageTest extends Base {
         String actual=login.getLoginFailedMessage();
         String expected=dataS.get(14);
         Assert.assertEquals(actual,expected,"User Logged in");
-        extentTest.get().log(Status.PASS, "user logged in Fails");
+        extentTest.get().log(Status.PASS, "user logged in Fails and Error message displayed successfully");
     }
     @Test(priority = 4,enabled = true,description = "TC_004_verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox",groups = {"regression"})
     public void verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox() throws IOException {
@@ -79,12 +79,13 @@ public class LoginPageTest extends Base {
         boolean statusRememberMe=login.getRememberMeSelection();
         System.out.println(statusRememberMe);
         Assert.assertTrue(statusRememberMe, "Checkbox Remember Me is not selected");
+        extentTest.get().log(Status.PASS, "clicked on Remember Me Check Box successfully");
         account=login.clickOnLoginButton();
         extentTest.get().log(Status.PASS, "clicked on login button successfully");
         String actual=account.getUserName();
         String expected=dataS.get(7);
         Assert.assertEquals(actual,expected,"User Login Failed");
-        extentTest.get().log(Status.PASS, "user logged in successfully");
+        extentTest.get().log(Status.PASS, "user logged in along with Remember Me Check Box checked successfully ");
     }
     @Test(priority =5,enabled = true,description = "TC_005_verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id",groups = {"regression"})
     public void verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id() throws IOException {
@@ -97,9 +98,10 @@ public class LoginPageTest extends Base {
         resetPassword.enterEmailAddress(dataS.get(17));
         extentTest.get().log(Status.PASS, "Email id  entered successfully");
         resetPassword.getResetPasswordLink();
+        extentTest.get().log(Status.PASS, "click on send password link button successfully");
         String actual=resetPassword.getResetPasswordErrorMessage();
         String expected=dataS.get(18);
         Assert.assertEquals(actual,expected,"Send password reset link successfully");
-        extentTest.get().log(Status.PASS, "Password Reset error message displayed successfully");
+        extentTest.get().log(Status.PASS, "Password Reset link error message displayed successfully");
     }
 }
