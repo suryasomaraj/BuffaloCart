@@ -10,6 +10,7 @@ import java.io.IOException;
 
 public class ResetPasswordPage extends ObjectUtility {
         WebDriver driver;
+
         /**Page Constructor**/
     public ResetPasswordPage(WebDriver driver){
             this.driver=driver;
@@ -19,10 +20,8 @@ public class ResetPasswordPage extends ObjectUtility {
     /**Page Elements**/
     private final String _emailAddress="input[id='email']";
     @FindBy(css=_emailAddress) private WebElement emailAddress;
-
     private final String _resetPasswordLink="button[type='submit']";
     @FindBy(css=_resetPasswordLink) private WebElement resetPasswordLink;
-
     private final String _errorResetPasswordMessage="span[class='help-block']>strong";
     @FindBy(css=_errorResetPasswordMessage) private WebElement errorResetPasswordMessage;
 
@@ -33,7 +32,6 @@ public class ResetPasswordPage extends ObjectUtility {
     }
     public ResetPasswordPage getResetPasswordLink() {
         page.clickOnElement(resetPasswordLink);
-        System.out.println("clicksuccess");
         return new ResetPasswordPage(driver);
     }
     public String getResetPasswordErrorMessage() throws IOException {

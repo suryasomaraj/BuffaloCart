@@ -98,7 +98,6 @@ public class LoginPageTest extends Base {
         extentTest.get().log(Status.PASS, "Email id  entered successfully");
         resetPassword.getResetPasswordLink();
         String actual=resetPassword.getResetPasswordErrorMessage();
-        System.out.println(dataS.get(18));
         String expected=dataS.get(18);
         Assert.assertEquals(actual,expected,"Send password reset link successfully");
         extentTest.get().log(Status.PASS, "Password Reset error message displayed successfully");

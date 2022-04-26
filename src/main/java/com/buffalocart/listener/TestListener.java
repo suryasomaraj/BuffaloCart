@@ -1,6 +1,5 @@
 package com.buffalocart.listener;
 
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
@@ -11,7 +10,6 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class TestListener extends Base implements ITestListener {
-    //Extent Report Declarations
     private static final ExtentReports extent = ExtentManager.createInstance();
     private static final ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
