@@ -2,5 +2,5 @@ package com.buffalocart.test;
 
 import com.buffalocart.automationcore.Base;
 
-public class MyAccountHomePageTest extends Base {
+public class ResetPasswordPageTest extends Base {
 }

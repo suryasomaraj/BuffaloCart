@@ -44,14 +44,12 @@ public class LoginPage extends ObjectUtility {
     public void enterLoginPassword(String password) {
         page.enterText(loginPassword, password);
     }
-    public MyAccountHomePage clickOnLoginButton() {
+    public MyAccountPage clickOnLoginButton() {
         page.clickOnElement(loginButton);
-        return new MyAccountHomePage(driver);
+        return new MyAccountPage(driver);
     }
     public String getLoginFailedMessage() throws IOException {
         String errorMessage = page.getElementText(loginFailedMessage);
-        String expected = String.valueOf(excel.readDataFromExcel("LoginPage"));
-        System.out.println(expected);
         return errorMessage;
     }
     public boolean getRememberMeSelection() {

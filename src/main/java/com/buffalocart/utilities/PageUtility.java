@@ -12,11 +12,11 @@ import java.util.Set;
 public class PageUtility {
     /**Web Driver Commands**/
     public String getPageTitle(WebDriver driver){
-        String title=driver.getTitle();
+        String title= driver.getTitle();
         return title;
     }
     public String getSourceCode(WebDriver driver){
-        String sourceCode=driver.getPageSource();
+        String sourceCode= driver.getPageSource();
         return sourceCode;
     }
 
