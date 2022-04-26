@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="sanity Suite">
+    <test name="sanity ">
+        <classes>
+            <class name="com.buffalocart.test.LoginPageTest">
+                <methods>
+                    <include name="verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

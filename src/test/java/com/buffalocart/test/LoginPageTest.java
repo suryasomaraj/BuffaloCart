@@ -89,6 +89,7 @@ public class LoginPageTest extends Base {
     @Test(priority =5,enabled = true,description = "TC_005_verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id",groups = {"regression"})
     public void verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id() throws IOException {
         login=new LoginPage(driver);
+        extentTest.get().assignCategory("sanity");
         extentTest.get().assignCategory("regression");
         resetPassword=login.clickOnForgotYourPassword();
         extentTest.get().log(Status.PASS, "click on forgot your password successfully");
