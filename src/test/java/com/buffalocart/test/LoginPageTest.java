@@ -103,5 +103,4 @@ public class LoginPageTest extends Base {
         Assert.assertEquals(actual,expected,"Send password reset link successfully");
         extentTest.get().log(Status.PASS, "Password Reset error message displayed successfully");
     }
-
 }

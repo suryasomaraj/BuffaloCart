@@ -15,6 +15,7 @@ public class ResetPasswordPage extends ObjectUtility {
             this.driver=driver;
             PageFactory.initElements(driver,this);
         }
+
     /**Page Elements**/
     private final String _emailAddress="input[id='email']";
     @FindBy(css=_emailAddress) private WebElement emailAddress;
@@ -41,5 +42,4 @@ public class ResetPasswordPage extends ObjectUtility {
         System.out.println(expected);
         return errorMessage;
     }
-
 }

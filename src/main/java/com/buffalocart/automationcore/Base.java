@@ -16,6 +16,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -65,9 +66,7 @@ public class Base {
         ExtentManager.createInstance().createTest(testContext.getName(), "TEST FAILED");
     }
     @BeforeMethod(alwaysRun = true)
-    //@Parameters({"browser","url"})
     public void setUp() {
-
         String browser= prop.getProperty("browser");
         String url=prop.getProperty("url");
         testInitialize(browser);

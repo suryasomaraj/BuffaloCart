@@ -12,28 +12,22 @@ public class LoginPage extends ObjectUtility {
     WebDriver driver;
 
     /**Page Constructor**/
-
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
     /**Page Elements**/
     private final String _loginName = "//input[@id='username']";
-    @FindBy(xpath = _loginName)
-    private WebElement loginName;
+    @FindBy(xpath = _loginName) private WebElement loginName;
 
     private final String _loginPassword = "//input[@id='password']";
-    @FindBy(xpath = _loginPassword)
-    private WebElement loginPassword;
+    @FindBy(xpath = _loginPassword) private WebElement loginPassword;
 
     private final String _loginButton = "button[type='submit']";
-    @FindBy(css = _loginButton)
-    private WebElement loginButton;
+    @FindBy(css = _loginButton) private WebElement loginButton;
 
     private final String _loginFailedMessage = "span[class='help-block']>strong";
-    @FindBy(css = _loginFailedMessage)
-    private WebElement loginFailedMessage;
+    @FindBy(css = _loginFailedMessage) private WebElement loginFailedMessage;
 
     private final String _loginRememberMe = "input[type='checkbox']";
     @FindBy(css = _loginRememberMe) private WebElement loginRememberMe;
@@ -42,7 +36,6 @@ public class LoginPage extends ObjectUtility {
     @FindBy(css = _forgotPasswordLogin) private WebElement forgotPasswordLogin;
 
     /** User Action Methods **/
-
     public String getLoginPageTitle() throws IOException {
         String title = page.getPageTitle(driver);
         String expected = String.valueOf(excel.readDataFromExcel("LoginPage"));
