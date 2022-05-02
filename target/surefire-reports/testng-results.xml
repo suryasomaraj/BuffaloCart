@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="3" total="13" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression" duration-ms="324804" started-at="2022-04-29T17:08:44 IST" finished-at="2022-04-29T17:14:09 IST">
+    <groups>
+      <group name="regression">
+        <method signature="LoginPageTest.verify_Login_Page_Title()[pri:1, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="verify_Login_Page_Title" class="com.buffalocart.test.LoginPageTest"/>
+        <method signature="LoginPageTest.verify_User_Login_With_Valid_User_Credentials()[pri:2, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="verify_User_Login_With_Valid_User_Credentials" class="com.buffalocart.test.LoginPageTest"/>
+        <method signature="LoginPageTest.verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox()[pri:4, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox" class="com.buffalocart.test.LoginPageTest"/>
+        <method signature="ResetPasswordPageTest.verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id()[pri:5, instance:com.buffalocart.test.ResetPasswordPageTest@2ea6137]" name="verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id" class="com.buffalocart.test.ResetPasswordPageTest"/>
+        <method signature="MyAccountPageTest.verify_Home_Page_Title()[pri:6, instance:com.buffalocart.test.MyAccountPageTest@41ee392b]" name="verify_Home_Page_Title" class="com.buffalocart.test.MyAccountPageTest"/>
+        <method signature="MyAccountPageTest.verify_Date_Displayed_In_Home_Page()[pri:7, instance:com.buffalocart.test.MyAccountPageTest@41ee392b]" name="verify_Date_Displayed_In_Home_Page" class="com.buffalocart.test.MyAccountPageTest"/>
+        <method signature="SignOutPageTest.verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button()[pri:8, instance:com.buffalocart.test.SignOutPageTest@1e67a849]" name="verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button" class="com.buffalocart.test.SignOutPageTest"/>
+      </group> <!-- regression -->
+      <group name="Regression">
+        <method signature="LoginPageTest.verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials(java.lang.String,java.lang.String)[pri:3, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials" class="com.buffalocart.test.LoginPageTest"/>
+      </group> <!-- Regression -->
+      <group name="smoke">
+        <method signature="LoginPageTest.verify_User_Login_With_Valid_User_Credentials()[pri:2, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="verify_User_Login_With_Valid_User_Credentials" class="com.buffalocart.test.LoginPageTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="Functional Test" duration-ms="324804" started-at="2022-04-29T17:08:44 IST" finished-at="2022-04-29T17:14:09 IST">
+      <class name="com.buffalocart.test.LoginPageTest">
+        <test-method status="PASS" signature="setExtent(org.testng.ITestContext)[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="setExtent" is-config="true" duration-ms="16" started-at="2022-04-29T17:08:44 IST" finished-at="2022-04-29T17:08:44 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1a9ec80e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtent -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="setUp" is-config="true" duration-ms="32497" started-at="2022-04-29T17:08:44 IST" finished-at="2022-04-29T17:09:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verify_Login_Page_Title()[pri:1, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="verify_Login_Page_Title" duration-ms="952" started-at="2022-04-29T17:09:17 IST" description="TC_001_verify_Login_Page_Title" finished-at="2022-04-29T17:09:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Login_Page_Title -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="tearDown" is-config="true" duration-ms="89" started-at="2022-04-29T17:09:18 IST" finished-at="2022-04-29T17:09:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Login_Page_Title status=SUCCESS method=LoginPageTest.verify_Login_Page_Title()[pri:1, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="setUp" is-config="true" duration-ms="23267" started-at="2022-04-29T17:09:18 IST" finished-at="2022-04-29T17:09:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verify_User_Login_With_Valid_User_Credentials()[pri:2, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="verify_User_Login_With_Valid_User_Credentials" duration-ms="8070" started-at="2022-04-29T17:09:41 IST" description="TC_002_verify_User_Login_With_Valid_User_Credentials" finished-at="2022-04-29T17:09:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_User_Login_With_Valid_User_Credentials -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="tearDown" is-config="true" duration-ms="90" started-at="2022-04-29T17:09:49 IST" finished-at="2022-04-29T17:09:49 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_User_Login_With_Valid_User_Credentials status=SUCCESS method=LoginPageTest.verify_User_Login_With_Valid_User_Credentials()[pri:2, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="setUp" is-config="true" duration-ms="25931" started-at="2022-04-29T17:09:49 IST" finished-at="2022-04-29T17:10:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials(java.lang.String,java.lang.String)[pri:3, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials" duration-ms="2340" started-at="2022-04-29T17:10:15 IST" description="TC_003__verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials" data-provider="user_credentials" finished-at="2022-04-29T17:10:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[AjuMathew]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="tearDown" is-config="true" duration-ms="72" started-at="2022-04-29T17:10:18 IST" finished-at="2022-04-29T17:10:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials status=SUCCESS method=LoginPageTest.verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials(java.lang.String,java.lang.String)[pri:3, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="setUp" is-config="true" duration-ms="40401" started-at="2022-04-29T17:10:18 IST" finished-at="2022-04-29T17:10:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials(java.lang.String,java.lang.String)[pri:3, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials" duration-ms="1561" started-at="2022-04-29T17:10:58 IST" description="TC_003__verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials" data-provider="user_credentials" finished-at="2022-04-29T17:11:00 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AjuMathew]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="tearDown" is-config="true" duration-ms="119" started-at="2022-04-29T17:11:00 IST" finished-at="2022-04-29T17:11:00 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials status=SUCCESS method=LoginPageTest.verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials(java.lang.String,java.lang.String)[pri:3, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="setUp" is-config="true" duration-ms="20532" started-at="2022-04-29T17:11:00 IST" finished-at="2022-04-29T17:11:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials(java.lang.String,java.lang.String)[pri:3, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials" duration-ms="1484" started-at="2022-04-29T17:11:20 IST" description="TC_003__verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials" data-provider="user_credentials" finished-at="2022-04-29T17:11:22 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin12]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="tearDown" is-config="true" duration-ms="134" started-at="2022-04-29T17:11:22 IST" finished-at="2022-04-29T17:11:22 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials status=SUCCESS method=LoginPageTest.verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials(java.lang.String,java.lang.String)[pri:3, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="setUp" is-config="true" duration-ms="31522" started-at="2022-04-29T17:11:22 IST" finished-at="2022-04-29T17:11:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox()[pri:4, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox" duration-ms="97" started-at="2022-04-29T17:11:53 IST" description="TC_004_verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox" finished-at="2022-04-29T17:11:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f]" name="tearDown" is-config="true" duration-ms="95" started-at="2022-04-29T17:11:54 IST" finished-at="2022-04-29T17:11:54 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox status=SUCCESS method=LoginPageTest.verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox()[pri:4, instance:com.buffalocart.test.LoginPageTest@7f9fcf7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.buffalocart.test.LoginPageTest -->
+      <class name="com.buffalocart.test.MyAccountPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.buffalocart.test.MyAccountPageTest@41ee392b]" name="setUp" is-config="true" duration-ms="24822" started-at="2022-04-29T17:12:29 IST" finished-at="2022-04-29T17:12:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verify_Home_Page_Title()[pri:6, instance:com.buffalocart.test.MyAccountPageTest@41ee392b]" name="verify_Home_Page_Title" duration-ms="8577" started-at="2022-04-29T17:12:53 IST" description="TC_006_verify_Home_Page_Title" finished-at="2022-04-29T17:13:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Home_Page_Title -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.buffalocart.test.MyAccountPageTest@41ee392b]" name="tearDown" is-config="true" duration-ms="87" started-at="2022-04-29T17:13:02 IST" finished-at="2022-04-29T17:13:02 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Home_Page_Title status=SUCCESS method=MyAccountPageTest.verify_Home_Page_Title()[pri:6, instance:com.buffalocart.test.MyAccountPageTest@41ee392b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.buffalocart.test.MyAccountPageTest@41ee392b]" name="setUp" is-config="true" duration-ms="28589" started-at="2022-04-29T17:13:02 IST" finished-at="2022-04-29T17:13:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verify_Date_Displayed_In_Home_Page()[pri:7, instance:com.buffalocart.test.MyAccountPageTest@41ee392b]" name="verify_Date_Displayed_In_Home_Page" duration-ms="6624" started-at="2022-04-29T17:13:31 IST" description="TC_007_verify_Date_Displayed_In_Home_Page" finished-at="2022-04-29T17:13:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Date_Displayed_In_Home_Page -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.buffalocart.test.MyAccountPageTest@41ee392b]" name="tearDown" is-config="true" duration-ms="81" started-at="2022-04-29T17:13:37 IST" finished-at="2022-04-29T17:13:37 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Date_Displayed_In_Home_Page status=SUCCESS method=MyAccountPageTest.verify_Date_Displayed_In_Home_Page()[pri:7, instance:com.buffalocart.test.MyAccountPageTest@41ee392b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.buffalocart.test.MyAccountPageTest -->
+      <class name="com.buffalocart.test.SignOutPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.buffalocart.test.SignOutPageTest@1e67a849]" name="setUp" is-config="true" duration-ms="21279" started-at="2022-04-29T17:13:37 IST" finished-at="2022-04-29T17:13:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button()[pri:8, instance:com.buffalocart.test.SignOutPageTest@1e67a849]" name="verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button" duration-ms="10177" started-at="2022-04-29T17:13:59 IST" description="TC_008_verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button" finished-at="2022-04-29T17:14:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.buffalocart.test.SignOutPageTest@1e67a849]" name="tearDown" is-config="true" duration-ms="160" started-at="2022-04-29T17:14:09 IST" finished-at="2022-04-29T17:14:09 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button status=SUCCESS method=SignOutPageTest.verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button()[pri:8, instance:com.buffalocart.test.SignOutPageTest@1e67a849] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.buffalocart.test.SignOutPageTest -->
+      <class name="com.buffalocart.test.ResetPasswordPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.buffalocart.test.ResetPasswordPageTest@2ea6137]" name="setUp" is-config="true" duration-ms="30628" started-at="2022-04-29T17:11:54 IST" finished-at="2022-04-29T17:12:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id()[pri:5, instance:com.buffalocart.test.ResetPasswordPageTest@2ea6137]" name="verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id" duration-ms="4282" started-at="2022-04-29T17:12:24 IST" description="TC_005_verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id" finished-at="2022-04-29T17:12:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.buffalocart.test.ResetPasswordPageTest@2ea6137]" name="tearDown" is-config="true" duration-ms="94" started-at="2022-04-29T17:12:29 IST" finished-at="2022-04-29T17:12:29 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id status=SUCCESS method=ResetPasswordPageTest.verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id()[pri:5, instance:com.buffalocart.test.ResetPasswordPageTest@2ea6137] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.buffalocart.test.ResetPasswordPageTest -->
+    </test> <!-- Functional Test -->
+  </suite> <!-- Regression -->
+</testng-results>

@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>TestNG:  Functional Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Functional Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Apr 29 17:08:44 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>324 seconds (324804 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.buffalocart.test.LoginPageTest.verify_Login_Page_Title()'><b>verify_Login_Page_Title</b><br>Test class: com.buffalocart.test.LoginPageTest<br>Test method: TC_001_verify_Login_Page_Title</td>
+<td></td>
+<td>0</td>
+<td>com.buffalocart.test.LoginPageTest@7f9fcf7f</td></tr>
+<tr>
+<td title='com.buffalocart.test.SignOutPageTest.verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button()'><b>verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button</b><br>Test class: com.buffalocart.test.SignOutPageTest<br>Test method: TC_008_verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button</td>
+<td></td>
+<td>10</td>
+<td>com.buffalocart.test.SignOutPageTest@1e67a849</td></tr>
+<tr>
+<td title='com.buffalocart.test.LoginPageTest.verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials()'><b>verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials</b><br>Test class: com.buffalocart.test.LoginPageTest<br>Test method: TC_003__verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials<br>Parameters: AjuMathew, 123456</td>
+<td></td>
+<td>1</td>
+<td>com.buffalocart.test.LoginPageTest@7f9fcf7f</td></tr>
+<tr>
+<td title='com.buffalocart.test.MyAccountPageTest.verify_Home_Page_Title()'><b>verify_Home_Page_Title</b><br>Test class: com.buffalocart.test.MyAccountPageTest<br>Test method: TC_006_verify_Home_Page_Title</td>
+<td></td>
+<td>8</td>
+<td>com.buffalocart.test.MyAccountPageTest@41ee392b</td></tr>
+<tr>
+<td title='com.buffalocart.test.MyAccountPageTest.verify_Date_Displayed_In_Home_Page()'><b>verify_Date_Displayed_In_Home_Page</b><br>Test class: com.buffalocart.test.MyAccountPageTest<br>Test method: TC_007_verify_Date_Displayed_In_Home_Page</td>
+<td></td>
+<td>6</td>
+<td>com.buffalocart.test.MyAccountPageTest@41ee392b</td></tr>
+<tr>
+<td title='com.buffalocart.test.LoginPageTest.verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials()'><b>verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials</b><br>Test class: com.buffalocart.test.LoginPageTest<br>Test method: TC_003__verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials<br>Parameters: admin, AjuMathew</td>
+<td></td>
+<td>2</td>
+<td>com.buffalocart.test.LoginPageTest@7f9fcf7f</td></tr>
+<tr>
+<td title='com.buffalocart.test.ResetPasswordPageTest.verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id()'><b>verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id</b><br>Test class: com.buffalocart.test.ResetPasswordPageTest<br>Test method: TC_005_verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id</td>
+<td></td>
+<td>4</td>
+<td>com.buffalocart.test.ResetPasswordPageTest@2ea6137</td></tr>
+<tr>
+<td title='com.buffalocart.test.LoginPageTest.verify_User_Login_With_Valid_User_Credentials()'><b>verify_User_Login_With_Valid_User_Credentials</b><br>Test class: com.buffalocart.test.LoginPageTest<br>Test method: TC_002_verify_User_Login_With_Valid_User_Credentials</td>
+<td></td>
+<td>8</td>
+<td>com.buffalocart.test.LoginPageTest@7f9fcf7f</td></tr>
+<tr>
+<td title='com.buffalocart.test.LoginPageTest.verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials()'><b>verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials</b><br>Test class: com.buffalocart.test.LoginPageTest<br>Test method: TC_003__verify_The_Error_Message_Displayed_For_User_Login_With_Invalid_Credentials<br>Parameters: admin123, admin12</td>
+<td></td>
+<td>1</td>
+<td>com.buffalocart.test.LoginPageTest@7f9fcf7f</td></tr>
+<tr>
+<td title='com.buffalocart.test.LoginPageTest.verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox()'><b>verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox</b><br>Test class: com.buffalocart.test.LoginPageTest<br>Test method: TC_004_verify_Whether_The_User_Is_Able_To_Click_On_Remember_Me_Checkbox</td>
+<td></td>
+<td>0</td>
+<td>com.buffalocart.test.LoginPageTest@7f9fcf7f</td></tr>
+</table><p>
+</body>
+</html>

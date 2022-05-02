@@ -30,11 +30,10 @@ public class ResetPasswordPage extends ObjectUtility {
         page.enterText(emailAddress, mailAddress);
         System.out.println("email");
     }
-    public ResetPasswordPage getResetPasswordLink() {
+    public void clickOnResetPasswordLink() {
         page.clickOnElement(resetPasswordLink);
-        return new ResetPasswordPage(driver);
     }
-    public String getResetPasswordErrorMessage() throws IOException {
+    public String getResetPasswordErrorMessage(){
         String errorMessage = page.getElementText(errorResetPasswordMessage);
         String expected = String.valueOf(excel.readDataFromExcel("LoginPage"));
         System.out.println(expected);

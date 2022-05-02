@@ -1,0 +1,6 @@
+com\buffalocart\test\UserManagementTest.class
+com\buffalocart\test\ResetPasswordPageTest.class
+com\buffalocart\test\SignOutPageTest.class
+com\buffalocart\test\LoginPageTest.class
+com\buffalocart\test\UsersPageTest.class
+com\buffalocart\test\MyAccountPageTest.class

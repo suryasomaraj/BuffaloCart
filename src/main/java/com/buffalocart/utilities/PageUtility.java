@@ -42,7 +42,6 @@ public class PageUtility {
     }
     public boolean isElementSelected(WebElement element) {
         boolean status = element.isSelected();
-        System.out.println("status="+status);
         return status;
     }
     public String getElementText(WebElement element){

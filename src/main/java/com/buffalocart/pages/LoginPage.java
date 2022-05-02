@@ -32,14 +32,14 @@ public class LoginPage extends ObjectUtility {
     @FindBy(css = _forgotPasswordLogin) private WebElement forgotPasswordLogin;
 
     /** User Action Methods **/
-    public String getLoginPageTitle() throws IOException {
+    public String getLoginPageTitle(){
         String title = page.getPageTitle(driver);
         String expected = String.valueOf(excel.readDataFromExcel("LoginPage"));
         System.out.println(expected);
         return title;
     }
     public void enterLoginEmail(String userName) {
-        page.enterText(loginName, userName);
+        page.enterText(loginName,userName);
     }
     public void enterLoginPassword(String password) {
         page.enterText(loginPassword, password);
@@ -48,11 +48,11 @@ public class LoginPage extends ObjectUtility {
         page.clickOnElement(loginButton);
         return new MyAccountPage(driver);
     }
-    public String getLoginFailedMessage() throws IOException {
+    public String getLoginFailedMessage(){
         String errorMessage = page.getElementText(loginFailedMessage);
         return errorMessage;
     }
-    public boolean getRememberMeSelection() {
+    public boolean clickOnRememberMeSelection() {
         page.clickOnElement(loginRememberMe);
         boolean rememberMeStatus=page.isElementSelected(loginRememberMe);
         System.out.println(rememberMeStatus);
@@ -62,4 +62,9 @@ public class LoginPage extends ObjectUtility {
         page.clickOnElement(forgotPasswordLogin);
         return new ResetPasswordPage(driver);
     }
+    public String getAfterSignOutLoginPageTitle(){
+        String title = page.getPageTitle(driver);
+        return title;
+    }
+
 }

@@ -8,6 +8,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,10 +18,18 @@ public class ExcelUtility {
     public static XSSFWorkbook wb;
     public static XSSFSheet sh;
     public static FileInputStream f;
-    public List<String> readDataFromExcel(String sheetName) throws IOException {
+    public List<String> readDataFromExcel(String sheetName){
         DataFormatter formatter = new DataFormatter();
-        f = new FileInputStream(Constants.TEST_DATA_EXCEL);
-        wb = new XSSFWorkbook(f);
+        try {
+            f = new FileInputStream(Constants.TEST_DATA_EXCEL);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            wb = new XSSFWorkbook(f);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         sh = wb.getSheet(sheetName);
         ArrayList<String> excelRows = new ArrayList<String>();
         for(Row r : sh) {
@@ -31,11 +40,19 @@ public class ExcelUtility {
         return excelRows;
     }
 
-    public ArrayList<ArrayList<String>> readDataSFromExcel(String sheetName) throws IOException {
+    public ArrayList<ArrayList<String>> readDataSFromExcel(String sheetName){
         DataFormatter formatter = new DataFormatter();
         ArrayList<ArrayList<String> > data = new ArrayList<ArrayList<String> >();
-        f = new FileInputStream(Constants.TEST_DATA_EXCEL);
-        wb = new XSSFWorkbook(f);
+        try {
+            f = new FileInputStream(Constants.TEST_DATA_EXCEL);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            wb = new XSSFWorkbook(f);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         sh = wb.getSheet(sheetName);
         int rowCount=sh.getLastRowNum()-sh.getFirstRowNum();
         ArrayList<String> excelRows = new ArrayList<String>();
@@ -52,11 +69,19 @@ public class ExcelUtility {
         return data;
     }
 
-    public Object[][]  getData(String sheetName) throws IOException {
+    public Object[][] getData1(String sheetName){
         DataFormatter formatter = new DataFormatter();
         ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
-        f = new FileInputStream(Constants.TEST_DATA_EXCEL);
-        wb = new XSSFWorkbook(f);
+        try {
+            f = new FileInputStream(Constants.TEST_DATA_EXCEL);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            wb = new XSSFWorkbook(f);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         sh = wb.getSheet(sheetName);
         int rowCount = sh.getLastRowNum() - sh.getFirstRowNum();
         ArrayList<String> excelRows = new ArrayList<String>();
@@ -74,7 +99,41 @@ public class ExcelUtility {
         Object[][] arr = data.stream()
                 .map(l -> l.toArray(new String[l.size()]))
                 .toArray(Object[][]::new);
+        return arr;
+    }
+    public Object[][]  getData(String sheetName) {
+        DataFormatter formatter = new DataFormatter();
+        ArrayList<ArrayList<String> > data = new ArrayList<ArrayList<String> >();
+        try {
+            f = new FileInputStream(Constants.TEST_DATA_EXCEL);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            wb = new XSSFWorkbook(f);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        sh = wb.getSheet(sheetName);
+        int rowCount=sh.getLastRowNum()-sh.getFirstRowNum();
+        ArrayList<String> excelRows = new ArrayList<String>();
+        for(int i=1;i<rowCount+1;i++){
+            int x=0;
+            Row row=sh.getRow(i);
+            String[] columnList=new String[row.getLastCellNum()];
+            for(int j=0;j<columnList.length;j++){
+                columnList[j]=formatter.formatCellValue(row.getCell(x));
+                x++;
+            }
+            data.add(new ArrayList<>(Arrays.asList(columnList)));
+        }
+
+        Object[][] arr = data.stream()
+                .map(l -> l.toArray(new String[l.size()]))
+                .toArray(Object[][]::new);
 
         return arr;
     }
+
+
 }

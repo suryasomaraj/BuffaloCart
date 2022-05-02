@@ -79,7 +79,7 @@ public class Base {
             File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File("./Screenshots/" + result.getName() + ".png"));
         }
-        driver.close();
+        //driver.close();
     }
 }
 
