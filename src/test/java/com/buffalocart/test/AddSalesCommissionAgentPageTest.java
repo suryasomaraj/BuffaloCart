@@ -7,19 +7,15 @@ import com.buffalocart.constants.Constants;
 import com.buffalocart.listener.TestListener;
 import com.buffalocart.pages.*;
 import com.buffalocart.utilities.ExcelUtility;
-import com.buffalocart.utilities.ObjectUtility;
 import com.buffalocart.utilities.RandomDataUtility;
 import com.buffalocart.utilities.WaitUtility;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 
-public class AddSalesCommissionAgentTest extends Base {
+public class AddSalesCommissionAgentPageTest extends Base {
     LoginPage login;
     ExcelUtility excel=new ExcelUtility();
     MyAccountPage account;

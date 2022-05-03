@@ -37,32 +37,29 @@ public class UsersPageTest extends Base {
         account.clickOnEndTour();
         extentTest.get().log(Status.PASS, "clicked on end tour button successfully");
         account.clickOnUserManagement();
-
-        extentTest.get().log(Status.PASS, "clicked on user management successfully");
-        users=account.clickOnUsersSubTag();
-        users=account.clickOnUsersSubTag();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
-        users.getUsersPageTitle();
-        //users.enterUserSearch("jupiter");
-
-
         try {
             Thread.sleep(300);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
+        extentTest.get().log(Status.PASS, "clicked on user management successfully");
+        users=account.clickOnUsersSubTag();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         extentTest.get().log(Status.PASS, "clicked on user management sub tag Users successfully");
         String actualUsersPageTitle = users.getUsersPageTitle();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Constants.PAGE_LOAD_WAIT));
         System.out.println(users.getUsersPageTitle());
-
         String expectedUsersPageTitle = dataS.get(7);
         extentTest.get().log(Status.PASS, "User page title received");
         Assert.assertEquals(actualUsersPageTitle,expectedUsersPageTitle,"Users page title not equal");
         extentTest.get().log(Status.PASS, "Expected title is matched with actual users page title");
     }
+
     @Test(priority = 11,enabled = true,description = "TC_0011_verify_User_Search_With_Valid_Data",groups = {"regression"})
     public void verify_User_Search_With_Valid_Data() {
         login = new LoginPage(driver);

@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-public class SalesCommissionAgentsTest extends Base {
+public class SalesCommissionAgentsPageTest extends Base {
     LoginPage login;
     ExcelUtility excel=new ExcelUtility();
     MyAccountPage account;

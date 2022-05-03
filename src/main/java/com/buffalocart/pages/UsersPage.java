@@ -20,12 +20,17 @@ public class UsersPage extends ObjectUtility {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
+
     /**Page Elements**/
     private final String _userSearch = "input[class='form-control input-sm']";
     @FindBy(css = _userSearch) private WebElement userSearch;
 
     private final String _addButton = "a[class='btn btn-block btn-primary']";
     @FindBy(css = _addButton) private WebElement addUserButton;
+    private final String _addUser = "div[class='toast-message']";
+    @FindBy(css = _addUser) private WebElement addUser;
+
 
     /**User Action Methods**/
     public String getUsersPageTitle() {
@@ -51,6 +56,11 @@ public class UsersPage extends ObjectUtility {
     public AddUserPage clickOnAddUserButton() {
         page.clickOnElement(addUserButton);
         return new AddUserPage(driver);
+    }
+
+    public String getAddedUser(){
+        String actual=page.getElementText(addUser);
+        return actual;
     }
 
 

@@ -3,20 +3,16 @@ package com.buffalocart.test;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.buffalocart.automationcore.Base;
-import com.buffalocart.constants.Constants;
 import com.buffalocart.listener.TestListener;
 import com.buffalocart.pages.LoginPage;
 import com.buffalocart.pages.MyAccountPage;
-import com.buffalocart.pages.UserManagementPage;
 import com.buffalocart.utilities.ExcelUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 
-public class UserManagementTest extends Base {
+public class UserManagementPageTest extends Base {
     LoginPage login;
     ExcelUtility excel=new ExcelUtility();
     MyAccountPage account;

@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-public class UpdateSalesCommissionAgentTest extends Base {
+public class UpdateSalesCommissionAgentPageTest extends Base {
     LoginPage login;
     ExcelUtility excel=new ExcelUtility();
     MyAccountPage account;
@@ -174,9 +174,6 @@ public class UpdateSalesCommissionAgentTest extends Base {
         String expected_addAgent="Commission agent deleted successfully";
         Assert.assertEquals(actual_addAgent,expected_addAgent,"deleted agent found");
         extentTest.get().log(Status.PASS, "Delete Sales Agent Details successfully");
-
-
-
     }
 
 

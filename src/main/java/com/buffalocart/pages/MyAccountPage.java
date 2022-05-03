@@ -43,7 +43,7 @@ public class MyAccountPage extends ObjectUtility {
 
 
 
-    //
+
 
 
 
@@ -75,7 +75,7 @@ public class MyAccountPage extends ObjectUtility {
         page.clickOnElement(userManagement);
     }
 
-////ul[@class='treeview-menu']
+
 private final String _usermanagementbutton="//div[2]/aside/section/ul/li[2]/a/span[1]";
     @FindBy(xpath=_usermanagementbutton) WebElement usermanagementbutton;
 
@@ -100,30 +100,16 @@ private final String _usermanagementbutton="//div[2]/aside/section/ul/li[2]/a/sp
         return subMenuUserManagement;
     }
 
-    /*
-    private final String _usersMenu="span[class='title']";
-    @FindBy(css=_usersMenu) private WebElement usersMenu;
-    public UsersPage clickOnUsersSubTag(){
-        page.clickOnElement(usersMenu);
-        return new UsersPage(driver);
-    }*/
 
 
 
 
-    private final String _usersMenu="span[class='title']";
-    @FindBy(xpath=_usersMenu) private List<WebElement> usersMenu;
+    private final String _usersMenu="//html/body/div[2]/aside/section/ul/li[2]/ul/li[1]/a/span";
+    @FindBy(xpath=_usersMenu) private WebElement usersMenu;
 
 
     public UsersPage clickOnUsersSubTag(){
-        List<String> userManagementMenu = new ArrayList<String>();
-        for(int i=0;i<usersMenu.size();i++) {
-            if (usersMenu.get(i).getText().equals("Users")) {
-                page.clickOnElement(usersMenu.get(i));
-                System.out.println("click");
-                //System.out.println(page.clickOnElement(usersMenu.get(i)));
-            }
-        }
+       page.clickOnElement(usersMenu);
         return new UsersPage(driver);
     }
 
