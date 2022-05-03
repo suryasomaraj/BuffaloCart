@@ -8,7 +8,7 @@
         <classes>
             <class name="com.buffalocart.test.UpdateSalesCommissionAgentTest">
                 <methods>
-                    <include name="verify_Edit_Sales_Agent_Details"/>
+                    <include name="verify_User_Can_Delete_A_Sales_Commission_Agents"/>
                 </methods>
             </class>
         </classes>

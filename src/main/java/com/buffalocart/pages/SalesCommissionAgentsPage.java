@@ -35,6 +35,16 @@ public class SalesCommissionAgentsPage extends ObjectUtility {
 
 
 
+    private final String _deleteSalesCommissionAgentButton = "//table[@id='sales_commission_agent_table']/tbody/tr[1]/td[6]/button[2]";
+    @FindBy(xpath = _deleteSalesCommissionAgentButton) private WebElement deleteSalesCommissionAgentButton;
+
+
+    private final String _deleteSalesCommissionAgentAlertButton = "//div[4]/div/div[3]/div[2]/button";
+    @FindBy(xpath = _deleteSalesCommissionAgentAlertButton) private WebElement deleteSalesCommissionAgentAlertButton;
+
+    private final String _deleteSalesCommissionAgentDetails = "div[class='toast-message']";
+    @FindBy(css = _deleteSalesCommissionAgentDetails) private WebElement deleteSalesCommissionAgentDetails;
+
 
 
 
@@ -65,7 +75,7 @@ public class SalesCommissionAgentsPage extends ObjectUtility {
     }
 
 
-    public UpdateSalesCommissionAgentPage clickOnEditSalesCommissionAgent(){
+    public UpdateSalesCommissionAgentPage clickOnEditSalesCommissionAgentButton(){
         page.clickOnElement(editSalesCommissionAgent);
         return new UpdateSalesCommissionAgentPage(driver);
     }
@@ -76,6 +86,19 @@ public class SalesCommissionAgentsPage extends ObjectUtility {
         String getSalesCommissionAgent=page.getElementText(getSalesCommissionAgentSearchedMail);
         System.out.println(getSalesCommissionAgent);
         return getSalesCommissionAgent;
+    }
+
+
+    public void clickOnDeleteSalesCommissionAgentButton(){
+        page.clickOnElement(deleteSalesCommissionAgentButton);
+    }
+
+    public void clickOnDeleteSalesCommissionAgentAlertButton(){
+        deleteSalesCommissionAgentAlertButton.click();
+    }
+    public String getDeletedSalesCommissionAgent(){
+        String getSalesCommissionAgentData=page.getElementText(deleteSalesCommissionAgentDetails);
+        return getSalesCommissionAgentData;
     }
 
 
