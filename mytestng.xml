@@ -6,9 +6,9 @@
     </listeners>
     <test name="Functional Test">
         <classes>
-            <class name="com.buffalocart.test.AddUsersPageTest">
+            <class name="com.buffalocart.test.SalesCommissionAgentsPageTest">
                 <methods>
-                    <include name="verify_User_Can_Add_User_Details"/>
+                    <include name="verify_Sales_Commission_Agents_Page_Title"/>
                 </methods>
             </class>
         </classes>

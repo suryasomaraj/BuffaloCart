@@ -32,6 +32,34 @@ public class UsersPage extends ObjectUtility {
     @FindBy(css = _addUser) private WebElement addUser;
 
 
+    private final String _userEditSearch = "input[class='form-control input-sm']";
+    @FindBy(css = _userEditSearch) private WebElement userEditSearch;
+
+
+    private final String _editUserButton = "//table[@id='users_table']/tbody/tr/td[5]/a[1]";
+    @FindBy(xpath = _editUserButton) private WebElement editUserButton;
+
+    private final String _updateUser = "div[class='toast-message']";
+    @FindBy(css = _updateUser) private WebElement updateUser;
+
+
+    private final String _deleteUserButton = "//table[@id='users_table']/tbody/tr[1]/td[5]/button";
+    @FindBy(xpath = _deleteUserButton) private WebElement deleteUserButton;
+
+    private final String _deleteUser = "div[class='toast-message']";
+    @FindBy(css = _deleteUser) private WebElement deleteUser;
+
+
+    private final String _deleteAlertButton = "//html/body/div[4]/div/div[4]/div[2]/button";
+    @FindBy(xpath = _deleteAlertButton) private WebElement deleteAlertButton;
+
+
+    private final String _viewUserButton = "//table[@id='users_table']/tbody/tr[1]/td[5]/a[2]";
+    @FindBy(xpath = _viewUserButton) private WebElement viewUserButton;
+
+
+
+
     /**User Action Methods**/
     public String getUsersPageTitle() {
         String title = page.getPageTitle(driver);
@@ -61,6 +89,32 @@ public class UsersPage extends ObjectUtility {
     public String getAddedUser(){
         String actual=page.getElementText(addUser);
         return actual;
+    }
+    public void userSearchEdit(String user){
+        page.enterText(userEditSearch,user);
+    }
+    public UpdateUserPage clickOnUserEditButton(){
+        page.clickOnElement(editUserButton);
+        return new UpdateUserPage(driver);
+    }
+    public String getUpdateUser(){
+        String actual=page.getElementText(updateUser);
+        return actual;
+    }
+    public void clickOnUserDeleteButton(){
+        page.clickOnElement(deleteUserButton);
+    }
+    public String getDeleteUser(){
+        String delete=page.getElementText(deleteUser);
+        return delete;
+    }
+    public void clickOnDeleteAlert(){
+        page.clickOnElement(deleteAlertButton);
+    }
+
+    public ViewUsersPage clickOnViewUserButton(){
+        page.clickOnElement(viewUserButton);
+        return new ViewUsersPage(driver);
     }
 
 
