@@ -14,15 +14,13 @@ public class UpdateRolesPage extends ObjectUtility {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
+    /**web element**/
     private final String _enterNewRole = "input[id='name']";
     @FindBy(css = _enterNewRole) private WebElement newRole;
-
     private final String _updateRoleButton = "button[class='btn btn-primary pull-right']";
     @FindBy(css = _updateRoleButton) private WebElement updateRoleButton;
 
-
-
+    /**User Action**/
     public String getEditRolePageTitle(){
         String title = page.getPageTitle(driver);
         return title;
@@ -31,12 +29,8 @@ public class UpdateRolesPage extends ObjectUtility {
         newRole.clear();
         page.enterText(newRole,newRoleAdd);
     }
-
     public RolesPage updateRoleButton(){
         page.clickOnElement(updateRoleButton);
         return new RolesPage(driver);
     }
-
-
-
 }

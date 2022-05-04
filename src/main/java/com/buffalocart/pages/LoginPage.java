@@ -66,5 +66,4 @@ public class LoginPage extends ObjectUtility {
         String title = page.getPageTitle(driver);
         return title;
     }
-
 }

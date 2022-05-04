@@ -10,6 +10,7 @@ import com.buffalocart.utilities.ExcelUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 public class UserManagementPageTest extends Base {
@@ -32,9 +33,11 @@ public class UserManagementPageTest extends Base {
         extentTest.get().log(Status.PASS, "clicked on login button successfully");
         account.clickOnEndTour();
         extentTest.get().log(Status.PASS, "clicked on end tour button successfully");
-        account.clickOnUserManagementbutton();
+        account.clickOnUserManagementButton();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         extentTest.get().log(Status.PASS, "clicked on UserManagement button successfully");
         List<String> actualSubMenuList=account.getUserManagementSubMenu();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         /*account.clickOnUserManagement();
         extentTest.get().log(Status.PASS, "clicked on user management successfully");

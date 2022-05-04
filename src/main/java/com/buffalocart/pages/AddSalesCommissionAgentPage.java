@@ -33,15 +33,12 @@ public class AddSalesCommissionAgentPage extends ObjectUtility {
     @FindBy(css = _salesCommissionAgentSaveButton) private WebElement salesCommissionAgentSaveButton;
 
     /**user action**/
-
     public void enterSalesCommissionAgentSurName(String salesAgentSurName) {
         page.enterText(salesCommissionAgentSurName,salesAgentSurName);
     }
-
     public void enterSalesCommissionAgentFirstName(String salesAgentFirstName) {
         page.enterText(salesCommissionAgentFirstName,salesAgentFirstName);
     }
-
     public void enterSalesCommissionAgentLastName(String salesAgentLastName) {
         page.enterText(salesCommissionAgentLastName,salesAgentLastName);
     }
@@ -57,15 +54,8 @@ public class AddSalesCommissionAgentPage extends ObjectUtility {
     public void enterSalesCommissionCommissionPercentage(String CommissionPercentage) {
         page.enterText(salesCommissionAgentCommissionPercentage,CommissionPercentage);
     }
-
     public SalesCommissionAgentsPage clickOnSalesCommissionAgentSaveButton() {
         page.clickOnElement(salesCommissionAgentSaveButton);
         return new SalesCommissionAgentsPage(driver);
     }
-
-
-
-
-
-
 }

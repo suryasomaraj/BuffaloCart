@@ -10,14 +10,13 @@ import java.io.IOException;
 
 public class ResetPasswordPage extends ObjectUtility {
         WebDriver driver;
-
         /**Page Constructor**/
     public ResetPasswordPage(WebDriver driver){
             this.driver=driver;
             PageFactory.initElements(driver,this);
         }
 
-    /**Page Elements**/
+        /**Page Elements**/
     private final String _emailAddress="input[id='email']";
     @FindBy(css=_emailAddress) private WebElement emailAddress;
     private final String _resetPasswordLink="button[type='submit']";

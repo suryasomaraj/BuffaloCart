@@ -19,7 +19,6 @@ public class UpdateUserPage extends ObjectUtility {
     @FindBy(css = _userSurName) private WebElement userSurName;
     private final String _userUpdatePercentage = "input[id='cmmsn_percent']";
     @FindBy(css = _userUpdatePercentage) private WebElement userUpdatePercentage;
-
     private final String _userUpdateEditButton = "button[id='submit_user_button']";
     @FindBy(css = _userUpdateEditButton) private WebElement userUpdateEditButton;
 
@@ -28,7 +27,6 @@ public class UpdateUserPage extends ObjectUtility {
         String title = page.getPageTitle(driver);
         return title;
     }
-
     public void enterUserUpdatePercentage(String userUpdatePercentage1) {
         userUpdatePercentage.clear();
         page.enterText(userUpdatePercentage,userUpdatePercentage1);

@@ -11,6 +11,4 @@ public class UserManagementPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
-
 }

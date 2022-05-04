@@ -15,15 +15,12 @@ public class ViewUsersPage  extends ObjectUtility {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
+    /**Web Element**/
     private final String _getEmail = "/html/body/div[2]/div[1]/section[2]/div/div/div/div[2]/p[1]";
     @FindBy(xpath = _getEmail) private WebElement getEmail;
-
+    /**user action**/
     public String getViewUsers(){
         String actual=page.getElementText(getEmail);
         return actual;
-
     }
-
-
 }

@@ -115,12 +115,13 @@ public class AddUsersPageTest extends Base {
         addUser.enterUserPercentage(dataAdd.get(13));
         extentTest.get().log(Status.PASS, "User percentage entered successfully");
         users=addUser.clickOnUserSaveButton();
-        extentTest.get().log(Status.PASS, "User percentage entered successfully");
+        extentTest.get().log(Status.PASS, "User save button click successfully");
         String actual_addUser=users.getAddedUser();
         extentTest.get().log(Status.PASS, "get the agent details successfully");
         String expected_addUser="User added successfully";
         extentTest.get().log(Status.PASS, "expected user is equal to actual user");
         Assert.assertEquals(actual_addUser,expected_addUser,"newly added user not found");
         extentTest.get().log(Status.PASS, "User can add user details successfully");
+
     }
 }

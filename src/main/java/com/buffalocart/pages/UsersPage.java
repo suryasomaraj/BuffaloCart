@@ -31,6 +31,9 @@ public class UsersPage extends ObjectUtility {
     private final String _addUser = "div[class='toast-message']";
     @FindBy(css = _addUser) private WebElement addUser;
 
+    private final String _signOut="div[class='pull-right']>a";
+    @FindBy(css=_signOut) private WebElement signOut;
+
 
     private final String _userEditSearch = "input[class='form-control input-sm']";
     @FindBy(css = _userEditSearch) private WebElement userEditSearch;
@@ -57,7 +60,15 @@ public class UsersPage extends ObjectUtility {
     private final String _viewUserButton = "//table[@id='users_table']/tbody/tr[1]/td[5]/a[2]";
     @FindBy(xpath = _viewUserButton) private WebElement viewUserButton;
 
+    private final String _accountUserName="//html/body/div[2]/header/nav/div/ul/li[2]/a/span";
+    @FindBy(xpath=_accountUserName) private WebElement accountUserName;
 
+
+    private final String _goToAccount="/html/body/div[2]/aside/section/ul/li[1]/a/span";
+    @FindBy(xpath=_goToAccount) private WebElement goToAccount;
+
+private final String _invalidUser="//table[@id='users_table']/tbody/tr/td";
+    @FindBy(xpath=_invalidUser) private WebElement invalidUser;
 
 
     /**User Action Methods**/
@@ -66,12 +77,23 @@ public class UsersPage extends ObjectUtility {
         System.out.println(title);
         return title;
     }
+    public MyAccountPage goToUserAccount(){
+        page.clickOnElement(goToAccount);
+        return new MyAccountPage(driver);
+    }
+
+
     public void enterUserSearch(String userName) {
         page.enterText(userSearch,userName);
     }
+
+    private final String _rowElement="//table[@id='users_table']//th";
+    @FindBy(xpath=_rowElement) private List<WebElement> rowElement;
+    private final String _columnElement="//table[@id='users_table']//tr//td";
+    @FindBy(xpath=_columnElement) private List<WebElement> columnElement;
+
+
     public List<ArrayList<String>> getValidUserData() {
-        List<WebElement> rowElement = driver.findElements(By.xpath("//table[@id='users_table']//th"));
-        List<WebElement> columnElement = driver.findElements(By.xpath("//table[@id='users_table']//tr//td"));
         List<ArrayList<String>> expected_userData = table.getGridData(rowElement, columnElement);
         return expected_userData;
     }
@@ -115,6 +137,19 @@ public class UsersPage extends ObjectUtility {
     public ViewUsersPage clickOnViewUserButton(){
         page.clickOnElement(viewUserButton);
         return new ViewUsersPage(driver);
+    }
+
+    public LoginPage clickOnSignOutButton() {
+        page.clickOnElement(signOut);
+        return new LoginPage(driver);
+    }
+
+    public void clickOnAccountUserName(){
+        page.clickOnElement(accountUserName);
+    }
+
+    public String getInvalidUser(){
+        return page.getElementText(invalidUser);
     }
 
 
