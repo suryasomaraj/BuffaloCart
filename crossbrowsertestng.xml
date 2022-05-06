@@ -5,8 +5,6 @@
         <parameter name="browser" value="chrome"/>
         <parameter name="url" value="https://qalegend.com/billing/public/login"/>
         <classes>
-
-
             <class name="com.buffalocart.test.ResetPasswordPageTest">
                 <methods>
                     <include name="verify_Error_Message_Displayed_On_Reset_Password_Page_With_Invalid_Email_Id"/>

@@ -1,4 +1,4 @@
-package com.buffalocart.extendreport;
+package com.buffalocart.automationcore.extendreport;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;

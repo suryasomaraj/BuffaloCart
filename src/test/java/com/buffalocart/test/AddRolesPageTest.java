@@ -43,10 +43,10 @@ public class AddRolesPageTest extends Base {
         account.clickOnEndTour();
         extentTest.get().log(Status.PASS, "clicked on end tour button successfully");
         account.clickOnUserManagement();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Constants.PAGE_LOAD_WAIT));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         extentTest.get().log(Status.PASS, "clicked on user management successfully");
         roles=account.clickOnRoles();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Constants.PAGE_LOAD_WAIT));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         addRoles=roles.clickOnAddRolesButton();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Constants.PAGE_LOAD_WAIT));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));

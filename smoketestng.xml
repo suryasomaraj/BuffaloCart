@@ -11,6 +11,26 @@
                     <include name="verify_User_Login_With_Valid_User_Credentials"/>
                 </methods>
             </class>
+            <class name="com.buffalocart.test.SignOutPageTest">
+                <methods>
+                    <include name="verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button"/>
+                </methods>
+            </class>
+            <class name="com.buffalocart.test.UsersPageTest">
+                <methods>
+                    <include name="verify_Message_Displayed_By_User_Search_With_Invalid_Data"/>
+                </methods>
+            </class>
+            <class name="com.buffalocart.test.AddUsersPageTest">
+                <methods>
+                    <include name="verify_User_Can_Add_User_Details"/>
+                </methods>
+            </class>
+            <class name="com.buffalocart.test.AddRolesPageTest">
+                <methods>
+                    <include name="verify_User_Can_Add_Roles"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

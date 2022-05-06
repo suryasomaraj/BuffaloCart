@@ -4,7 +4,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 import com.buffalocart.automationcore.Base;
-import com.buffalocart.extendreport.ExtentManager;
+import com.buffalocart.automationcore.extendreport.ExtentManager;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;

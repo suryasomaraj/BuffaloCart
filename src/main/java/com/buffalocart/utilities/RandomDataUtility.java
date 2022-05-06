@@ -35,12 +35,4 @@ public class RandomDataUtility {
         return email;
     }
 
-
-
-    public static void main(String args[]){
-        RandomDataUtility data=new RandomDataUtility();
-        //data.randomRole();
-        System.out.println(data.randomUser());
-    }
-
 }

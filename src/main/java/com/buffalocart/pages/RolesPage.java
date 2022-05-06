@@ -23,8 +23,10 @@ public class RolesPage extends ObjectUtility {
     @FindBy(css = _enterNewRole) private WebElement newRole;
     private final String _saveNewRoleButton = "button[class='btn btn-primary pull-right']";
     @FindBy(css = _saveNewRoleButton) private WebElement saveNewRoleButton;
+
     private final String _roleAdded = "div[class='toast-message']";
     @FindBy(css = _roleAdded) private WebElement roleAdded;
+
     private final String _searchRoleBox = "input[class='form-control input-sm']";
     @FindBy(css = _searchRoleBox) private WebElement searchRoleBox;
     private final String _editRoleButton = "//table[@id='roles_table']/tbody/tr/td[2]/a";
@@ -37,6 +39,8 @@ public class RolesPage extends ObjectUtility {
     @FindBy(xpath = _deleteConfirmRolesButton) private WebElement deleteConfirmRolesButton;
     private final String _roleDelete = "div[class='toast-message']";
     @FindBy(css = _roleDelete) private WebElement roleDelete;
+    private final String _userHome="/html/body/div[2]/aside/section/ul/li[1]/a/span";
+    @FindBy(xpath=_userHome) private WebElement userHome;
 
     /**User Actions**/
     public String getRolesPageTitle(){
@@ -72,11 +76,14 @@ public class RolesPage extends ObjectUtility {
         page.clickOnElement(deleteRolesButton);
     }
     public void ClickOnConfirmDeleteRoleButton(){
-        //page.acceptAlert(driver);
         page.clickOnElement(deleteConfirmRolesButton);
     }
     public String getRolesDeleted(){
         String roleDelete1=page.getElementText(roleDelete);
         return roleDelete1;
+    }
+    public MyAccountPage clickOnHome(){
+        page.clickOnElement(userHome);
+        return new MyAccountPage(driver);
     }
 }

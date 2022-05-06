@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
+
 public class AddUserPage extends ObjectUtility {
     WebDriver driver;
 
@@ -35,6 +37,13 @@ public class AddUserPage extends ObjectUtility {
     @FindBy(css = _submit_user_button) private WebElement submit_user_button;
     private final String _mandatoryError = "//label[@id='email-error']";
     @FindBy(xpath = _mandatoryError) private WebElement mandatoryError;
+    private final String _addRole = "//span[@id='select2-role-container']";
+    @FindBy(xpath = _addRole) private WebElement addRole;
+    private final String _enterSearchRole = "/html/body/span/span/span[1]/input";
+    @FindBy(xpath = _enterSearchRole) private WebElement enterSearchRole;
+
+    private final String _enterSearchRole1 = "#select2-role-container";
+    @FindBy(css = _enterSearchRole1) private WebElement enterSearchRole1;
 
 
     /**User Actions**/
@@ -73,5 +82,21 @@ public class AddUserPage extends ObjectUtility {
     public String errorMandatoryDisplay(){
         String mandatoryErrorActual=page.getElementText(mandatoryError);
         return mandatoryErrorActual;
+    }
+    public void clickOnSearchRolesButton(){
+        page.clickOnElement(addRole);
+    }
+    public void enterSearchRole(String role){
+        page.enterText(enterSearchRole,role);
+    }
+    public void selectSearchRoleDrop(String new_Role){
+        page.selectDropdownByValue(enterSearchRole1,"Test Engineer");
+       // page.selectDropdownByValue(enterSearchRole,new_Role);
+    }
+    public void equal(String new_Role){
+        if(page.getElementText(enterSearchRole1).equals(new_Role)){
+            System.out.println("Equal");
+        }
+
     }
 }

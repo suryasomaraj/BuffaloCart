@@ -1,6 +1,7 @@
 package com.buffalocart.pages;
 
 import com.buffalocart.utilities.ObjectUtility;
+import com.buffalocart.utilities.WaitUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -79,18 +80,14 @@ public class MyAccountPage extends ObjectUtility {
             subMenuUserManagement.add(usersSubMenuTags.get(i).getText());
             System.out.println(subMenuUserManagement.add(usersSubMenuTags.get(i).getText()));
         }
-        System.out.println(subMenuUserManagement.size());
-        System.out.println(subMenuUserManagement.get(0));
-        System.out.println(subMenuUserManagement);
         return subMenuUserManagement;
     }
     public UsersPage clickOnUsersSubTag(){
-       page.clickOnElement(usersMenu);
+        page.clickOnElement(usersMenu);
         return new UsersPage(driver);
     }
     public RolesPage clickOnRoles(){
         page.clickOnElement(userManagementRoles);
-
         return new RolesPage(driver);
     }
     public SalesCommissionAgentsPage clickOnSalesCommissionAgents(){

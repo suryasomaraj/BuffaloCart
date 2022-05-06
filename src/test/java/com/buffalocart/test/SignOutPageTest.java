@@ -3,6 +3,7 @@ package com.buffalocart.test;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.buffalocart.automationcore.Base;
+import com.buffalocart.constants.Constants;
 import com.buffalocart.listener.TestListener;
 import com.buffalocart.pages.LoginPage;
 import com.buffalocart.pages.MyAccountPage;
@@ -11,6 +12,7 @@ import com.buffalocart.utilities.ExcelUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 public class SignOutPageTest extends Base {
@@ -37,10 +39,18 @@ public class SignOutPageTest extends Base {
         extentTest.get().log(Status.PASS, "clicked on end tour button successfully");
         account.clickOnAccountUserName();
         extentTest.get().log(Status.PASS, "clicked on user name successfully");
-        account.clickOnSignOutButton();
+        login=account.clickOnSignOutButton();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Constants.PAGE_LOAD_WAIT));
         extentTest.get().log(Status.PASS, "clicked on sign out button successfully");
         List<String> dataS=excel.readDataFromExcel("LoginPage");
         String actualTitle =login.getAfterSignOutLoginPageTitle();
+
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Constants.PAGE_LOAD_WAIT));
         String expectedTitle = dataS.get(6);
         extentTest.get().log(Status.PASS, "Login page loaded successfully");
         Assert.assertEquals(actualTitle,expectedTitle,"Login Page not Loaded");

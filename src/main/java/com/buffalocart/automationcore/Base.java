@@ -1,7 +1,7 @@
 package com.buffalocart.automationcore;
 
 import com.buffalocart.constants.Constants;
-import com.buffalocart.extendreport.ExtentManager;
+import com.buffalocart.automationcore.extendreport.ExtentManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -79,7 +79,7 @@ public class Base {
             File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File("./Screenshots/" + result.getName() + ".png"));
         }
-        //driver.close();
+        driver.close();
     }
 }
 
